@@ -1,0 +1,91 @@
+{
+  "code":{
+    "color": "1",
+    "custom_group1":{
+      "keyword_type":"list",
+      "keywords": [ 
+        "as"
+        ],
+      "pre": "<span class='has-inline-color has-light-green-cyan-color'>",
+      "post": "</span>"
+    },
+    "custom_group2":{
+      "keyword_type":"list",
+      "keywords": [ 
+        "for",
+        "def",
+        "in",
+        "if",
+        "elif",
+        "else",
+        "while",
+        "return",
+        "import",
+        "not",
+        "and",
+        "or"
+        ],
+      "pre": "<span class='has-inline-color has-vivid-green-cyan-color'><em>",
+      "post": "</em></span>"
+    },
+    "function":{
+      "keyword_type":"regex",
+      "keywords": [
+        "\\s(.+?)\\("
+      ],
+      "pre": "<span class='has-inline-color has-vivid-cyan-blue-color'>",
+      "post": "</span>"
+    },
+    "operator":{
+      "keyword_type":"regex",
+      "keywords": [
+        "[\\=\\-\\+\\*\\/\\<\\>]"
+      ],
+      "pre": "<span class='has-inline-color has-vivid-red-color'>",
+      "post": "</span>"
+    },
+    "digit":{
+      "keyword_type":"regex",
+      "keywords": [
+      "\\d+"
+      ],
+      "pre": "<span class='has-inline-color has-luminous-vivid-amber-color'>",
+      "post": "</span>"
+    },
+    "string":{
+      "keyword_type":"regex",
+      "keywords": [
+      "\\\"[^\\\"]+\\\"", 
+      "\\'[^\\']+\\'"
+      ],
+      "pre": "<span class='has-inline-color has-luminous-vivid-orange-color'>",
+      "post": "</span>"
+    },
+    "priority":[
+      "string",
+      "function",
+      "operator",
+      "digit",
+      "custom_group1",
+      "custom_group2"
+    ],
+    "block_pre": "<pre class='wp-block-code'><code>",
+    "block_post": "</code></pre>"
+  },
+  "image":{
+    "block_pre": "<figure class='wp-block-image'><img src='data:image/png;base64,",
+    "block_post": "' alt=''/></figure>"
+  },
+  "performatted":{
+    "block_pre": "<pre class='wp-block-preformatted'>",
+    "block_post": "</pre>"
+  },
+  "html-table":{
+    "keywords": "<table[^>]+>(.*?)</table>",
+    "block_pre": "<table border='1'>",
+    "block_post": "</table>"
+  }
+}
+  
+  
+    
